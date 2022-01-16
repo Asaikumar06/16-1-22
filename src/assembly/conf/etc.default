@@ -1,0 +1,7 @@
+BASEDIR=/var/lib/paytm
+LOGDIR=/var/log/paytm
+HEAPSIZE=1024m
+CONFFILE=/etc/clarind/paytm.yaml
+SERVICEJARFILE=/usr/share/paytm/paytm.jar
+CONTEXTPATH=/paytm
+export LOGDIR CONTEXTPATH BASEDIR HEAPSIZE CONFFILE SERVICEJARFILE

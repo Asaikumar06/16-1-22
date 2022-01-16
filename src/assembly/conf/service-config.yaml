@@ -1,0 +1,22 @@
+server:
+  type: simple
+  applicationContextPath: /paytm
+  connector:
+    type: http
+    port: 4016
+  requestLog:
+    timeZone: UTC
+    appenders:
+      - type: file
+        currentLogFilename: /var/log/paytm/access.log
+        archivedLogFilenamePattern: /var/log/paytm/access-%d.log.gz
+        archivedFileCount: 5
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: /var/log/paytm/paytm.log
+      archivedLogFilenamePattern: /var/log/paytm/paytm-%d.log.gz
+      archivedFileCount: 5
+      timeZone: UTC
